@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="label01" destination="yfG-an-6Hg" id="CgB-5S-gkl"/>
+                <outlet property="tf001" destination="IWU-Td-QLw" id="AX1-iw-1c0"/>
+                <outlet property="tf002" destination="A4r-UV-3zK" id="ri3-Ze-EpG"/>
+                <outlet property="view" destination="iN0-l3-epB" id="P93-gI-0oX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfG-an-6Hg">
+                    <rect key="frame" x="0.0" y="44" width="414" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWU-Td-QLw">
+                    <rect key="frame" x="0.0" y="72.5" width="414" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                </textField>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMv-Ve-Bp7">
+                    <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                    <items>
+                        <barButtonItem title="001" id="RDt-Jk-IFI">
+                            <connections>
+                                <action selector="tap001:" destination="-1" id="uHC-H5-Kbs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="002" id="g47-q1-yVB" userLabel="002">
+                            <connections>
+                                <action selector="tap002:" destination="-1" id="A5x-dA-cjB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="003" id="png-Ut-Zax">
+                            <connections>
+                                <action selector="tap003:" destination="-1" id="LRr-T6-znA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="004" id="ghe-cJ-ysS">
+                            <connections>
+                                <action selector="tap004:" destination="-1" id="ceI-yH-dvc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="005" id="0SC-aw-4B8">
+                            <connections>
+                                <action selector="tap005:" destination="-1" id="Pnb-N5-ES1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="006" id="0yf-fQ-tyO">
+                            <connections>
+                                <action selector="tap006:" destination="-1" id="a97-H3-BjA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="007" id="qDn-61-ynz">
+                            <connections>
+                                <action selector="tap007:" destination="-1" id="HtQ-d9-OOl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="008" id="PaF-JB-aea">
+                            <connections>
+                                <action selector="tap008:" destination="-1" id="fsU-7j-Zbf"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A4r-UV-3zK">
+                    <rect key="frame" x="0.0" y="114.5" width="414" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="A4r-UV-3zK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Byv-zN-TOR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="A4r-UV-3zK" secondAttribute="trailing" id="FTd-rg-ghZ"/>
+                <constraint firstItem="yfG-an-6Hg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LmG-hv-9Xu"/>
+                <constraint firstItem="MMv-Ve-Bp7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="P8y-LH-MMA"/>
+                <constraint firstItem="MMv-Ve-Bp7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="RZN-fk-gg3"/>
+                <constraint firstItem="IWU-Td-QLw" firstAttribute="top" secondItem="yfG-an-6Hg" secondAttribute="bottom" constant="8" symbolic="YES" id="c5u-It-Bmi"/>
+                <constraint firstItem="yfG-an-6Hg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="d4J-Dz-NGH"/>
+                <constraint firstItem="IWU-Td-QLw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="diU-WH-ckX"/>
+                <constraint firstItem="MMv-Ve-Bp7" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="o73-Rx-Jh1"/>
+                <constraint firstItem="A4r-UV-3zK" firstAttribute="top" secondItem="IWU-Td-QLw" secondAttribute="bottom" constant="8" id="oZ3-fS-r8S"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yfG-an-6Hg" secondAttribute="trailing" id="qff-X9-4x8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IWU-Td-QLw" secondAttribute="trailing" id="vmw-Km-X37"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="132" y="33"/>
+        </view>
+    </objects>
+</document>

@@ -7,10 +7,34 @@
 //
 
 #import "Rest.h"
+#import "NSUserDefaults+MockLab.h"
 
 @implementation Rest
 
 #pragma mark - Basic Request
+
++ (NSString *)getURLFor:(NSString *)path {
+    return [NSString stringWithFormat:@"%@%@",NSUserDefaults.getBaseURL,path];
+}
+
++(void)basicRequest:(NSString*)urlString
+         bodyString:(NSString*)bodyString
+             method:(NSString*)method
+         onComplete:(DataBlock)callback
+            onError:(ErrorHandler)errorHandler {
+    NSMutableURLRequest *request = [self getBasicRequest:urlString bodyString:bodyString method:method];
+    [self resumeSessionOnRequest:request onComlete:callback onError:errorHandler];
+}
+
++(void)authRequest:(NSString*)urlString
+         bodyString:(NSString*)bodyString
+             method:(NSString*)method
+         onComplete:(DataBlock)callback
+            onError:(ErrorHandler)errorHandler {
+    NSMutableURLRequest *request = [self getBasicRequest:urlString bodyString:bodyString method:method];
+    [request addValue:[NSString stringWithFormat:@"INGRESSCOOKIE=%@;JSESSIONID=%@", NSUserDefaults.getIngress, NSUserDefaults.getJSession] forHTTPHeaderField:@"cookie"];
+    [self resumeSessionOnRequest:request onComlete:callback onError:errorHandler];
+}
 
 + (NSMutableURLRequest*)getBasicRequest:(NSString*)urlString
                              bodyString:(NSString*)bodyString
@@ -23,15 +47,6 @@
         [request setHTTPBody:body];
     }
     return request;
-}
-
-+(void)basicRequest:(NSString*)urlString
-         bodyString:(NSString*)bodyString
-             method:(NSString*)method
-         onComplete:(DataBlock)callback
-            onError:(ErrorHandler)errorHandler {
-    NSMutableURLRequest *request = [self getBasicRequest:urlString bodyString:bodyString method:method];
-    [self resumeSessionOnRequest:request onComlete:callback onError:errorHandler];
 }
 
 +(void)resumeSessionOnRequest:(NSURLRequest*)request
@@ -47,7 +62,7 @@
                 errorHandler(err);
             } else {
                 NSError *err; id json = nil;
-                if (data != nil && data.length > 0) {
+                if (data != nil) {
                     json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&err];
                     if (err) errorHandler(err);
                     if (callback) callback(json);

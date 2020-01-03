@@ -13,8 +13,10 @@
 		B005B83F23B68607000E6BD9 /* Rest.m in Sources */ = {isa = PBXBuildFile; fileRef = B005B83D23B68607000E6BD9 /* Rest.m */; };
 		B005B84223B6F6DD000E6BD9 /* Rest+Auth.h in Headers */ = {isa = PBXBuildFile; fileRef = B005B84023B6F6DD000E6BD9 /* Rest+Auth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B005B84323B6F6DE000E6BD9 /* Rest+Auth.m in Sources */ = {isa = PBXBuildFile; fileRef = B005B84123B6F6DD000E6BD9 /* Rest+Auth.m */; };
-		B005B84623B6FEE0000E6BD9 /* NSUserDefaults+MockLab.h in Headers */ = {isa = PBXBuildFile; fileRef = B005B84423B6FEE0000E6BD9 /* NSUserDefaults+MockLab.h */; };
+		B005B84623B6FEE0000E6BD9 /* NSUserDefaults+MockLab.h in Headers */ = {isa = PBXBuildFile; fileRef = B005B84423B6FEE0000E6BD9 /* NSUserDefaults+MockLab.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B005B84723B6FEE0000E6BD9 /* NSUserDefaults+MockLab.m in Sources */ = {isa = PBXBuildFile; fileRef = B005B84523B6FEE0000E6BD9 /* NSUserDefaults+MockLab.m */; };
+		B0612EF723BFD35800525A0E /* PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = B0612EF623BFD35800525A0E /* PrefixHeader.pch */; };
+		B0612EFF23C0011C00525A0E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0612EFE23C0011C00525A0E /* ViewController.xib */; };
 		B090C57823AACF260031B7C1 /* MOBX.h in Headers */ = {isa = PBXBuildFile; fileRef = B090C57623AACF260031B7C1 /* MOBX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B090C58123AACF5D0031B7C1 /* ViewUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B090C57F23AACF5D0031B7C1 /* ViewUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B090C58223AACF5D0031B7C1 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B090C58023AACF5D0031B7C1 /* ViewUtils.m */; };
@@ -63,6 +65,8 @@
 		B005B84123B6F6DD000E6BD9 /* Rest+Auth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Rest+Auth.m"; sourceTree = "<group>"; };
 		B005B84423B6FEE0000E6BD9 /* NSUserDefaults+MockLab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+MockLab.h"; sourceTree = "<group>"; };
 		B005B84523B6FEE0000E6BD9 /* NSUserDefaults+MockLab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+MockLab.m"; sourceTree = "<group>"; };
+		B0612EF623BFD35800525A0E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B0612EFE23C0011C00525A0E /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		B090C57323AACF260031B7C1 /* MOBX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MOBX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B090C57623AACF260031B7C1 /* MOBX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOBX.h; sourceTree = "<group>"; };
 		B090C57723AACF260031B7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		B090C56923AACF260031B7C1 = {
 			isa = PBXGroup;
 			children = (
+				B0612EF623BFD35800525A0E /* PrefixHeader.pch */,
 				B090C57523AACF260031B7C1 /* MOBX */,
 				B090C58823AAD02C0031B7C1 /* MOBXDemo */,
 				B090C57423AACF260031B7C1 /* Products */,
@@ -162,6 +167,7 @@
 				B090C59723AAD02F0031B7C1 /* LaunchScreen.storyboard */,
 				B090C59A23AAD02F0031B7C1 /* Info.plist */,
 				B090C59B23AAD02F0031B7C1 /* main.m */,
+				B0612EFE23C0011C00525A0E /* ViewController.xib */,
 			);
 			path = MOBXDemo;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			files = (
 				B005B84223B6F6DD000E6BD9 /* Rest+Auth.h in Headers */,
 				B005B83E23B68607000E6BD9 /* Rest.h in Headers */,
+				B0612EF723BFD35800525A0E /* PrefixHeader.pch in Headers */,
 				B005B84623B6FEE0000E6BD9 /* NSUserDefaults+MockLab.h in Headers */,
 				B090C57823AACF260031B7C1 /* MOBX.h in Headers */,
 				B090C58123AACF5D0031B7C1 /* ViewUtils.h in Headers */,
@@ -292,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B090C59923AAD02F0031B7C1 /* LaunchScreen.storyboard in Resources */,
+				B0612EFF23C0011C00525A0E /* ViewController.xib in Resources */,
 				B090C59623AAD02F0031B7C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +439,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -490,6 +500,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

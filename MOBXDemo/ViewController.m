@@ -9,34 +9,39 @@
 #import "ViewController.h"
 #import <MOBX/MOBX.h>
 
+#define W UIScreen.mainScreen.bounds.size.width
+
 @interface ViewController ()
-@property (nonatomic,weak) UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UILabel *label01;
+@property (weak, nonatomic) IBOutlet UITextField *tf001;
+@property (weak, nonatomic) IBOutlet UITextField *tf002;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColor.whiteColor;
-    [self.view addSubview:({
-        UILabel *label = UILabel.new;
-        label.text = @"Init value";
-        [label sizeToFit];
-        label.center = CGPointMake(80, 100);
-        self.labelName = label;
-        self.labelName;
-    })];
-    
-    
+    self.label01.text = NSUserDefaults.getBaseURL;
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [Rest getVersion:^(id  _Nonnull data) {
-        NSLog(@"%@",data);
-    } onError:^(NSError * _Nonnull err) {
-        NSLog(@"%@", err);
-    }];
+- (IBAction)tap001:(id)sender {
+    [NSUserDefaults setBaseURL:self.tf001.text];
+    self.label01.text = self.tf001.text;
+    self.tf001.text = @"";
 }
-
+- (IBAction)tap002:(id)sender {
+}
+- (IBAction)tap003:(id)sender {
+}
+- (IBAction)tap004:(id)sender {
+}
+- (IBAction)tap005:(id)sender {
+}
+- (IBAction)tap006:(id)sender {
+}
+- (IBAction)tap007:(id)sender {
+}
+- (IBAction)tap008:(id)sender {
+}
 
 @end

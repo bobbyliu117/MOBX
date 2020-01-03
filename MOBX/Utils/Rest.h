@@ -8,16 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef void(^Block)(void);
-typedef void(^DataBlock)(id _Nonnull data);
-typedef void(^ErrorHandler)(NSError * _Nonnull err);
+typedef void(^DataBlock)(id data);
+typedef void(^ErrorHandler)(NSError * err);
 
 @interface Rest : NSObject
 
-+(void)basicRequest:(NSString*_Nonnull)urlString
++(NSString*)getURLFor:(NSString*)path;
+
++(void)basicRequest:(NSString*)urlString
          bodyString:(NSString*_Nullable)bodyString
-             method:(NSString*_Nonnull)method
-         onComplete:(DataBlock _Nonnull )callback
-            onError:(ErrorHandler _Nonnull )errorHandler;
+             method:(NSString*)method
+         onComplete:(DataBlock)callback
+            onError:(ErrorHandler)errorHandler;
+
++(void)authRequest:(NSString*)urlString
+        bodyString:(NSString*_Nullable)bodyString
+            method:(NSString*)method
+        onComplete:(DataBlock _Nullable )callback
+           onError:(ErrorHandler _Nullable )errorHandler;
 @end
 
+NS_ASSUME_NONNULL_END

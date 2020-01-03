@@ -11,7 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSUserDefaults (MockLab)
-
++(void)setJSessionCookie:(NSString*)cookie;
++(NSString*)getJSession;
++(void)setIngressCookie:(NSString*)cookie;
++(NSString*)getIngress;
++(void)setBaseURL:(NSString*)baseURL;
++(NSString*)getBaseURL;
 @end
 
 NS_ASSUME_NONNULL_END

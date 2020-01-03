@@ -10,6 +10,12 @@
 #import "Rest.h"
 
 @interface Rest (Auth)
+
 +(void)getVersion:(DataBlock)callback onError:(ErrorHandler)errorHandler;
+
++(void)login:(NSString*)username password:(NSString*)password callback:(DataBlock)callback onError:(ErrorHandler)errorHandler;
+
++(void)getUserInfo:(NSString*)username callback:(DataBlock)callback onError:(ErrorHandler)errorHandler;
+
 @end
 
