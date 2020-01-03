@@ -17,3 +17,5 @@ FOUNDATION_EXPORT const unsigned char MOBXVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <MOBX/PublicHeader.h>
 
 #import "ViewUtils.h"
+#import "Rest.h"
+#import "Rest+Auth.h"
